@@ -38,3 +38,7 @@ endif
 # Pixel APNs
 PRODUCT_COPY_FILES += \
     vendor/customization/telephony/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+
+# Disable RescueParty due to high risk of data loss
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.disable_rescue=true
