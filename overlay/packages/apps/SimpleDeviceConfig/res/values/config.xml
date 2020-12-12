@@ -16,6 +16,9 @@
 -->
 <resources>
     <string-array name="device_config">
+        <!-- ART heap compaction for cached apps -->
+        <item>activity_manager/use_compaction=true</item>
+
         <!-- Disable unused AiAi features -->
         <item>device_personalization_services/Attention__enabled=false</item>
         <item>device_personalization_services/Autofill__enable=false</item>
