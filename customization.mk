@@ -14,6 +14,10 @@
 
 LOCAL_PATH := vendor/customization
 
+# Apps
+PRODUCT_PACKAGES += \
+    MotoTimeWeather
+
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
