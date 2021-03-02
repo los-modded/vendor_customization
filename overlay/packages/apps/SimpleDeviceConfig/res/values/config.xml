@@ -31,6 +31,9 @@
         <item>device_personalization_services/VisualCortex__enable=false</item>
         <item>device_personalization_services/NowPlaying__enable=false</item>
 
+        <!-- Cached app freezer on supported devices -->
+        <item>activity_manager_native_boot/use_freezer=true</item>
+
         <!-- Live Captions -->
         <item>device_personalization_services/Captions__manifest_url_template=https://storage.googleapis.com/captions/%{NAMESPACE}_%{VERSION}_manifest.json</item>
         <item>device_personalization_services/Captions__model_version_v1=20190613</item>
