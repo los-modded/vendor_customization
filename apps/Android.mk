@@ -3,7 +3,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE := MotoTimeWeather
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := $(LOCAL_MODULE)/Motorola_TimeWeather_3.01.15_modified_by_alphaeva.apk
+LOCAL_SRC_FILES := $(LOCAL_MODULE)/Motorola_TimeWeather.apk
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
