@@ -18,9 +18,12 @@
 TARGET_BOOTANIMATION := vendor/customization/bootanimation/bootanimation.zip
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := bootanimation.zip
+LOCAL_MODULE := bootanimation-stock.zip
 LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH := $(TARGET_OUT)/media
+LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/media
+LOCAL_MODULE_STEM := bootanimation.zip
+LOCAL_OVERRIDES_PACKAGES := bootanimation.zip
+LOCAL_PRODUCT_MODULE := true
 
 include $(BUILD_SYSTEM)/base_rules.mk
 
