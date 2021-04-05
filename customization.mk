@@ -89,3 +89,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.lm.rc
 
+# GamingMode
+PRODUCT_PACKAGES += \
+    GamingMode
