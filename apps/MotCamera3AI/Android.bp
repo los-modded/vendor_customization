@@ -1,0 +1,10 @@
+android_app_import {
+    name: "MotCamera3AI",
+    owner: "motorola",
+    presigned: true,
+    apk: "MotCamera3AI.apk",
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}

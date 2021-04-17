@@ -1,0 +1,17 @@
+dex_import {
+    name: "moto-settings",
+    owner: "motorola",
+    jars: ["moto-settings.jar"],
+    required: [
+        "moto-settings_permissions",
+    ],
+}
+
+prebuilt_etc {
+    name: "moto-settings_permissions",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "moto-settings.xml",
+    filename_from_src: true,
+}
+

@@ -1,0 +1,92 @@
+android_app_import {
+    name: "MotCamera3",
+    owner: "motorola",
+    apk: "MotCamera3.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    required: [
+        "com.motorola.androidx.camera.extensions",
+        "com.motorola.motosignature",
+        "hiddenapi-whitelist-com.motorola.camera3",
+        "libmcf_native_window_helper.motocamera",
+        "moto-settings",
+        "MotCamera3AI",
+        "MotorolaSettingsProvider",
+        "privapp-permissions-com.motorola.camera3",
+    ],
+    product_specific: true,
+    overrides: ["Snap", "Snap2", "SnapdragonCamera", "SnapdragonCamera2", "Camera", "Camera2"],
+}
+
+cc_prebuilt_library_shared {
+    name: "libmcf_native_window_helper.motocamera",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+            android_arm: {
+                srcs: ["lib/libmcf_native_window_helper.motocamera.so"],
+	    },
+	    android_arm64: {
+                srcs: ["lib64/libmcf_native_window_helper.motocamera.so"],
+	    },
+    },
+    required: [
+        "public.libraries-motocamera",
+    ],
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    system_ext_specific: true,
+}
+
+
+prebuilt_etc {
+    name: "hiddenapi-whitelist-com.motorola.camera3",
+    owner: "motorola",
+    sub_dir: "sysconfig",
+    src: "sysconfig/hiddenapi-whitelist-com.motorola.camera3.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-com.motorola.camera3",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "permissions/privapp-permissions-com.motorola.camera3.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "public.libraries-motocamera",
+    owner: "motorola",
+    src: "etc/public.libraries-motocamera.txt",
+    filename_from_src: true,
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "com.motorola.androidx.camera.extensions",
+    owner: "motorola",
+    jars: ["frameworks/com.motorola.androidx.camera.extensions.jar"],
+    required: [
+        "com.motorola.androidx.camera.extensions_permissions",
+    ],
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "com.motorola.androidx.camera.extensions_permissions",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "permissions/com.motorola.androidx.camera.extensions.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
+

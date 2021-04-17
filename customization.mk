@@ -54,3 +54,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # BootAnimation
 PRODUCT_PACKAGES += \
     bootanimation-stock.zip
+
+# MotCamera3
+PRODUCT_PACKAGES += \
+    MotCamera3

@@ -1,0 +1,17 @@
+dex_import {
+    name: "com.motorola.motosignature",
+    owner: "motorola",
+    jars: ["com.motorola.motosignature.jar"],
+    required: [
+        "com.motorola.motosignature_permissions",
+    ],
+}
+
+prebuilt_etc {
+    name: "com.motorola.motosignature_permissions",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "com.motorola.motosignature.xml",
+    filename_from_src: true,
+}
+
