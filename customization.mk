@@ -61,3 +61,12 @@ PRODUCT_PACKAGES += \
 
 # SEPolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += vendor/customization/sepolicy/private
+
+# Pixel Sounds
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/customization/sounds/,$(TARGET_COPY_OUT_PRODUCT)/media/audio)
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.ringtone=The_big_adventure.ogg \
+    ro.config.notification_sound=End_note.ogg \
+    ro.config.alarm_alert=Bright_morning.ogg
