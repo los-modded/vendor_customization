@@ -70,3 +70,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.ringtone=The_big_adventure.ogg \
     ro.config.notification_sound=End_note.ogg \
     ro.config.alarm_alert=Bright_morning.ogg
+
+# StitchImage
+PRODUCT_PACKAGES += \
+    StitchImage \
+    StitchImageService
