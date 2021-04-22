@@ -56,8 +56,11 @@ PRODUCT_PACKAGES += \
     bootanimation-stock.zip
 
 # MotCamera3
+TARGET_MOTOCAM3_SUPPORTED ?= true
+ifeq ($(TARGET_MOTOCAM3_SUPPORTED),true)
 PRODUCT_PACKAGES += \
     MotCamera3
+endif
 
 # SEPolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += vendor/customization/sepolicy/private
