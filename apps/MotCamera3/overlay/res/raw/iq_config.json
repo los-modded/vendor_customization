@@ -1,0 +1,785 @@
+{
+  "minsk": {
+    "software_flash": {
+      "color": "#ffffe4ce",
+      "alpha": "0.8f",
+      "delay_time": "150",
+      "cct-color": "1:#FFFFECE0;2900:#FFFFECE1;3000:#FFFFECE2;3100:#FFFFEDE2;3200:#FFFFEDE3;3300:#FFFFEDE4;3400:#FFFFEEE4;3500:#FFFFEEE5;3600:#FFFFEEE6;3700:#FFFFEFE6;3800:#FFFFEFE7;3900:#FFFFEFE8;4000:#FFFFEFE8;4100:#FFFFF0E9;4200:#FFFFF0EA;4300:#FFFFF0EA;4400:#FFFFF1EB;4500:#FFFFF1EC;4600:#FFFFF1EC;4700:#FFFFF2ED;4800:#FFFFF2EE;4900:#FFFFF2EE;5000:#FFFFF2EF;5100:#FFFFF3F0;5200:#FFFFF3F0;5300:#FFFFF3F1;5400:#FFFFF4F2;5500:#FFFFF4F2;5600:#FFFFF4F3;5700:#FFFFF5F4;5800:#FFFFF5F4;5900:#FFFFF5F5;6000:#FFFFF5F6;6100:#FFFFF6F6;6200:#FFFFF6F7;6300:#FFFFF6F8;6400:#FFFFF7F8;6500:#FFFFF7F9;6600:#FFFFF7FA;6700:#FFFFF8FA;6800:#FFFFF8FB;6900:#FFFFF8FC;7000:#FFFFF9FD;"
+    },
+    "qc_mfnr_settings" : {
+      "default" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [0, 80],
+          "number_of_frames" : 5,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 0,
+          "mfnr_burst_mode_enable" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [80, 2000],
+          "number_of_frames" : 3,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 0,
+          "mfnr_burst_mode_enable" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [2000, -1],
+          "number_of_frames" : 3,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 0,
+          "mfnr_burst_mode_enable" : false
+        }
+      ]
+    },
+    "time_estimates" : [
+      {
+        "zoom_range" : [0,-1],
+        "lux_range" : [0, -1],
+        "time_estimate_coeff" : [ 50, 250, 1.22, 141, 350, 135]
+      }
+    ]
+  },
+  "liber": {
+    "software_flash": {
+      "color": "#ffffe4ce",
+      "alpha": "1.0f",
+      "delay_time": "150",
+      "cct-color": "1:#FFFFECE0;2900:#FFFFECE1;3000:#FFFFECE2;3100:#FFFFEDE2;3200:#FFFFEDE3;3300:#FFFFEDE4;3400:#FFFFEEE4;3500:#FFFFEEE5;3600:#FFFFEEE6;3700:#FFFFEFE6;3800:#FFFFEFE7;3900:#FFFFEFE8;4000:#FFFFEFE8;4100:#FFFFF0E9;4200:#FFFFF0EA;4300:#FFFFF0EA;4400:#FFFFF1EB;4500:#FFFFF1EC;4600:#FFFFF1EC;4700:#FFFFF2ED;4800:#FFFFF2EE;4900:#FFFFF2EE;5000:#FFFFF2EF;5100:#FFFFF3F0;5200:#FFFFF3F0;5300:#FFFFF3F1;5400:#FFFFF4F2;5500:#FFFFF4F2;5600:#FFFFF4F3;5700:#FFFFF5F4;5800:#FFFFF5F4;5900:#FFFFF5F5;6000:#FFFFF5F6;6100:#FFFFF6F6;6200:#FFFFF6F7;6300:#FFFFF6F8;6400:#FFFFF7F8;6500:#FFFFF7F9;6600:#FFFFF7FA;6700:#FFFFF8FA;6800:#FFFFF8FB;6900:#FFFFF8FC;7000:#FFFFF9FD;"
+    },
+    "qc_mfnr_settings" : {
+      "default" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [0, 80],
+          "number_of_frames" : 5,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 0,
+          "mfnr_burst_mode_enable" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [80, 2000],
+          "number_of_frames" : 3,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 0,
+          "mfnr_burst_mode_enable" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [2000, -1],
+          "number_of_frames" : 3,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 0,
+          "mfnr_burst_mode_enable" : false
+        }
+      ]
+    },
+    "time_estimates" : [
+      {
+        "zoom_range" : [0,-1],
+        "lux_range" : [0, -1],
+        "time_estimate_coeff" : [ 50, 250, 1.22, 141, 350, 135]
+      }
+    ]
+  },
+  "smith": {
+    "software_flash": {
+      "color": "#ffffece0",
+      "alpha": "0.8f",
+      "delay_time": "150",
+      "cct-color": "1:#FFFFECE0;2900:#FFFFECE1;3000:#FFFFECE2;3100:#FFFFEDE2;3200:#FFFFEDE3;3300:#FFFFEDE4;3400:#FFFFEEE4;3500:#FFFFEEE5;3600:#FFFFEEE6;3700:#FFFFEFE6;3800:#FFFFEFE7;3900:#FFFFEFE8;4000:#FFFFEFE8;4100:#FFFFF0E9;4200:#FFFFF0EA;4300:#FFFFF0EA;4400:#FFFFF1EB;4500:#FFFFF1EC;4600:#FFFFF1EC;4700:#FFFFF2ED;4800:#FFFFF2EE;4900:#FFFFF2EE;5000:#FFFFF2EF;5100:#FFFFF3F0;5200:#FFFFF3F0;5300:#FFFFF3F1;5400:#FFFFF4F2;5500:#FFFFF4F2;5600:#FFFFF4F3;5700:#FFFFF5F4;5800:#FFFFF5F4;5900:#FFFFF5F5;6000:#FFFFF5F6;6100:#FFFFF6F6;6200:#FFFFF6F7;6300:#FFFFF6F8;6400:#FFFFF7F8;6500:#FFFFF7F9;6600:#FFFFF7FA;6700:#FFFFF8FA;6800:#FFFFF8FB;6900:#FFFFF8FC;7000:#FFFFF9FD;"
+    },
+    "zsl_settings" : {
+      "default" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [0, 4],
+          "use_zsl" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [4, -1],
+          "use_zsl" : true
+        }
+      ],
+      "HDR" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [15000, -1],
+          "use_zsl" : false
+        }
+      ],
+      "HDR_NO_ADRC" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [15000, -1],
+          "use_zsl" : false
+        }
+      ]
+    },
+    "qc_mfnr_settings" : {
+      "default" : [
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [0, 4],
+          "number_of_frames" : 5,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 800,
+          "mfnr_burst_mode_enable" : true
+        },
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [4, 80],
+          "number_of_frames" : 5,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 400,
+          "mfnr_burst_mode_enable" : true
+        },
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [80, 1000],
+          "number_of_frames" : 5,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 400,
+          "mfnr_burst_mode_enable" : true
+        },
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [1000, -1],
+          "number_of_frames" : 3,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 400,
+          "mfnr_burst_mode_enable" : true
+        },
+        {
+          "zoom_range" : [2,-1],
+          "lux_range" : [0, 10000],
+          "number_of_frames" : 5,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 400,
+          "mfnr_burst_mode_enable" : true
+        },
+        {
+          "zoom_range" : [2,-1],
+          "lux_range" : [10000, -1],
+          "number_of_frames" : 3,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 400,
+          "mfnr_burst_mode_enable" : true
+        }
+      ],
+      "flash" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [0, -1],
+          "number_of_frames" : 5,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 400,
+          "mfnr_burst_mode_enable" : false
+        }
+      ],
+      "exposure_schedule_lowlight" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [470.0, 10000.0],
+          "exposure_time" : 250.0,
+          "code_override" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [458.0, 470.0],
+          "exposure_time" : 200.0,
+          "code_override" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [440.0, 458.0],
+          "exposure_time" : 167.0,
+          "code_override" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [430.0, 440.0],
+          "exposure_time" : 125.0,
+          "code_override" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [420.0, 430.0],
+          "exposure_time" : 100.0,
+          "code_override" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [401.0, 420.0],
+          "exposure_time" : 80.0,
+          "code_override" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [302.0, 401.0],
+          "exposure_time" : 0,
+          "code_override" : true
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [0.0, 302.0],
+          "exposure_time" : 0,
+          "code_override" : false
+        }
+      ]
+    },
+    "scene_selection_overrides" : {
+      "hdr_off" : [
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [0,15000],
+          "override_scene" : "HAL_FRAME_STACK"
+        },
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [15000,-1],
+          "override_scene" : "FAST_NORMAL"
+        },
+        {
+          "zoom_range" : [2,-1],
+          "lux_range" : [0,-1],
+          "override_scene" : "HAL_FRAME_STACK"
+        }
+      ],
+      "hdr_auto_off" : [
+        {
+          "zoom_range" : [0,2],
+          "lux_range": [0,15000],
+          "override_scene" : "HAL_FRAME_STACK"
+        },
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [15000,-1],
+          "override_scene" : "FAST_NORMAL"
+        },
+        {
+          "zoom_range" : [2,-1],
+          "lux_range" : [0,-1],
+          "override_scene" : "HAL_FRAME_STACK"
+        }
+      ],
+      "hdr_auto_on" : [
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [15000,-1],
+          "override_scene" : "HDR_NO_ADRC"
+        },
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [1,15000],
+          "override_scene" : "HDR_ADVANCED"
+        },
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [0,1],
+          "override_scene" : "HAL_FRAME_STACK"
+        },
+        {
+          "zoom_range" : [2,-1],
+          "lux_range" : [0,-1],
+          "override_scene" : "HAL_FRAME_STACK"
+        }
+      ],
+      "hdr_on" : [
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [15000,-1],
+          "override_scene" : "HDR_NO_ADRC"
+        },
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [1,15000],
+          "override_scene" : "HDR_ADVANCED"
+        },
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [0,1],
+          "override_scene" : "HAL_FRAME_STACK"
+        },
+        {
+          "zoom_range" : [2,-1],
+          "lux_range" : [0,-1],
+          "override_scene" : "HAL_FRAME_STACK"
+        }
+      ],
+      "flash" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [0,-1],
+          "override_scene" : "HAL_FRAME_STACK_FLASH"
+        }
+      ]
+    },
+    "auto_slow_capture" : [
+      {
+        "facing" : "back",
+        "zoom_range" : [0, -1],
+        "lux_range" : [0,3.78],
+        "scenes" : ["HAL_FRAME_STACK","HAL_FRAME_STACK_FLASH","HDR_ADVANCED"],
+        "time_estimate_threshold": 800
+      }
+    ],
+    "time_estimates" : [
+      {
+        "zoom_range" : [0,-1],
+        "lux_range" : [0, -1],
+        "time_estimate_coeff" : [ 80, 300, 1.22, 141, 250, 110]
+      }
+    ]
+  },
+  "guamna": {
+    "software_flash": {
+      "color": "#ffffece0",
+      "alpha": "0.8f",
+      "delay_time": "150",
+      "cct-color": "1:#FFFFECE0;2900:#FFFFECE1;3000:#FFFFECE2;3100:#FFFFEDE2;3200:#FFFFEDE3;3300:#FFFFEDE4;3400:#FFFFEEE4;3500:#FFFFEEE5;3600:#FFFFEEE6;3700:#FFFFEFE6;3800:#FFFFEFE7;3900:#FFFFEFE8;4000:#FFFFEFE8;4100:#FFFFF0E9;4200:#FFFFF0EA;4300:#FFFFF0EA;4400:#FFFFF1EB;4500:#FFFFF1EC;4600:#FFFFF1EC;4700:#FFFFF2ED;4800:#FFFFF2EE;4900:#FFFFF2EE;5000:#FFFFF2EF;5100:#FFFFF3F0;5200:#FFFFF3F0;5300:#FFFFF3F1;5400:#FFFFF4F2;5500:#FFFFF4F2;5600:#FFFFF4F3;5700:#FFFFF5F4;5800:#FFFFF5F4;5900:#FFFFF5F5;6000:#FFFFF5F6;6100:#FFFFF6F6;6200:#FFFFF6F7;6300:#FFFFF6F8;6400:#FFFFF7F8;6500:#FFFFF7F9;6600:#FFFFF7FA;6700:#FFFFF8FA;6800:#FFFFF8FB;6900:#FFFFF8FC;7000:#FFFFF9FD;"
+    }
+  },
+  "ginna": {
+    "software_flash": {
+      "color": "#ffffece0",
+      "alpha": "0.8f",
+      "delay_time": "150",
+      "cct-color": "1:#FFFFECE0;2900:#FFFFECE1;3000:#FFFFECE2;3100:#FFFFEDE2;3200:#FFFFEDE3;3300:#FFFFEDE4;3400:#FFFFEEE4;3500:#FFFFEEE5;3600:#FFFFEEE6;3700:#FFFFEFE6;3800:#FFFFEFE7;3900:#FFFFEFE8;4000:#FFFFEFE8;4100:#FFFFF0E9;4200:#FFFFF0EA;4300:#FFFFF0EA;4400:#FFFFF1EB;4500:#FFFFF1EC;4600:#FFFFF1EC;4700:#FFFFF2ED;4800:#FFFFF2EE;4900:#FFFFF2EE;5000:#FFFFF2EF;5100:#FFFFF3F0;5200:#FFFFF3F0;5300:#FFFFF3F1;5400:#FFFFF4F2;5500:#FFFFF4F2;5600:#FFFFF4F3;5700:#FFFFF5F4;5800:#FFFFF5F4;5900:#FFFFF5F5;6000:#FFFFF5F6;6100:#FFFFF6F6;6200:#FFFFF6F7;6300:#FFFFF6F8;6400:#FFFFF7F8;6500:#FFFFF7F9;6600:#FFFFF7FA;6700:#FFFFF8FA;6800:#FFFFF8FB;6900:#FFFFF8FC;7000:#FFFFF9FD;"
+    }
+  },
+  "guam": {
+    "software_flash": {
+      "color": "#ffffece0",
+      "alpha": "0.8f",
+      "delay_time": "150"
+    }
+  },
+  "borneo": {
+    "software_flash": {
+      "color": "#ffffece0",
+      "alpha": "0.8f",
+      "delay_time": "150",
+      "cct-color": "1:#FFFFECE0;2900:#FFFFECE1;3000:#FFFFECE2;3100:#FFFFEDE2;3200:#FFFFEDE3;3300:#FFFFEDE4;3400:#FFFFEEE4;3500:#FFFFEEE5;3600:#FFFFEEE6;3700:#FFFFEFE6;3800:#FFFFEFE7;3900:#FFFFEFE8;4000:#FFFFEFE8;4100:#FFFFF0E9;4200:#FFFFF0EA;4300:#FFFFF0EA;4400:#FFFFF1EB;4500:#FFFFF1EC;4600:#FFFFF1EC;4700:#FFFFF2ED;4800:#FFFFF2EE;4900:#FFFFF2EE;5000:#FFFFF2EF;5100:#FFFFF3F0;5200:#FFFFF3F0;5300:#FFFFF3F1;5400:#FFFFF4F2;5500:#FFFFF4F2;5600:#FFFFF4F3;5700:#FFFFF5F4;5800:#FFFFF5F4;5900:#FFFFF5F5;6000:#FFFFF5F6;6100:#FFFFF6F6;6200:#FFFFF6F7;6300:#FFFFF6F8;6400:#FFFFF7F8;6500:#FFFFF7F9;6600:#FFFFF7FA;6700:#FFFFF8FA;6800:#FFFFF8FB;6900:#FFFFF8FC;7000:#FFFFF9FD;"
+    }
+  },
+  "kiev": {
+    "software_flash": {
+      "delay_time": "150",
+      "color": "#ffffece0",
+      "alpha": "0.8f",
+      "cct-color": "1:#FFFFECE0;2900:#FFFFECE1;3000:#FFFFECE2;3100:#FFFFEDE2;3200:#FFFFEDE3;3300:#FFFFEDE4;3400:#FFFFEEE4;3500:#FFFFEEE5;3600:#FFFFEEE6;3700:#FFFFEFE6;3800:#FFFFEFE7;3900:#FFFFEFE8;4000:#FFFFEFE8;4100:#FFFFF0E9;4200:#FFFFF0EA;4300:#FFFFF0EA;4400:#FFFFF1EB;4500:#FFFFF1EC;4600:#FFFFF1EC;4700:#FFFFF2ED;4800:#FFFFF2EE;4900:#FFFFF2EE;5000:#FFFFF2EF;5100:#FFFFF3F0;5200:#FFFFF3F0;5300:#FFFFF3F1;5400:#FFFFF4F2;5500:#FFFFF4F2;5600:#FFFFF4F3;5700:#FFFFF5F4;5800:#FFFFF5F4;5900:#FFFFF5F5;6000:#FFFFF5F6;6100:#FFFFF6F6;6200:#FFFFF6F7;6300:#FFFFF6F8;6400:#FFFFF7F8;6500:#FFFFF7F9;6600:#FFFFF7FA;6700:#FFFFF8FA;6800:#FFFFF8FB;6900:#FFFFF8FC;7000:#FFFFF9FD;"
+    }
+  },
+  "cebu": {
+    "software_flash": {
+      "color": "#ffffece0",
+      "alpha": "0.8f",
+      "delay_time": "150",
+      "cct-color": "1:#FFFFECE0;2900:#FFFFECE1;3000:#FFFFECE2;3100:#FFFFEDE2;3200:#FFFFEDE3;3300:#FFFFEDE4;3400:#FFFFEEE4;3500:#FFFFEEE5;3600:#FFFFEEE6;3700:#FFFFEFE6;3800:#FFFFEFE7;3900:#FFFFEFE8;4000:#FFFFEFE8;4100:#FFFFF0E9;4200:#FFFFF0EA;4300:#FFFFF0EA;4400:#FFFFF1EB;4500:#FFFFF1EC;4600:#FFFFF1EC;4700:#FFFFF2ED;4800:#FFFFF2EE;4900:#FFFFF2EE;5000:#FFFFF2EF;5100:#FFFFF3F0;5200:#FFFFF3F0;5300:#FFFFF3F1;5400:#FFFFF4F2;5500:#FFFFF4F2;5600:#FFFFF4F3;5700:#FFFFF5F4;5800:#FFFFF5F4;5900:#FFFFF5F5;6000:#FFFFF5F6;6100:#FFFFF6F6;6200:#FFFFF6F7;6300:#FFFFF6F8;6400:#FFFFF7F8;6500:#FFFFF7F9;6600:#FFFFF7FA;6700:#FFFFF8FA;6800:#FFFFF8FB;6900:#FFFFF8FC;7000:#FFFFF9FD;"
+    }
+  },
+  "nio": {
+    "software_flash": {
+      "color": "#ffffece0",
+      "alpha": "0.8f",
+      "delay_time": "150",
+      "lux_range" : [10, 20],
+      "cct-color": "1:#FFFFECE0;2900:#FFFFECE1;3000:#FFFFECE2;3100:#FFFFEDE2;3200:#FFFFEDE3;3300:#FFFFEDE4;3400:#FFFFEEE4;3500:#FFFFEEE5;3600:#FFFFEEE6;3700:#FFFFEFE6;3800:#FFFFEFE7;3900:#FFFFEFE8;4000:#FFFFEFE8;4100:#FFFFF0E9;4200:#FFFFF0EA;4300:#FFFFF0EA;4400:#FFFFF1EB;4500:#FFFFF1EC;4600:#FFFFF1EC;4700:#FFFFF2ED;4800:#FFFFF2EE;4900:#FFFFF2EE;5000:#FFFFF2EF;5100:#FFFFF3F0;5200:#FFFFF3F0;5300:#FFFFF3F1;5400:#FFFFF4F2;5500:#FFFFF4F2;5600:#FFFFF4F3;5700:#FFFFF5F4;5800:#FFFFF5F4;5900:#FFFFF5F5;6000:#FFFFF5F6;6100:#FFFFF6F6;6200:#FFFFF6F7;6300:#FFFFF6F8;6400:#FFFFF7F8;6500:#FFFFF7F9;6600:#FFFFF7FA;6700:#FFFFF8FA;6800:#FFFFF8FB;6900:#FFFFF8FC;7000:#FFFFF9FD;"
+    },
+    "zsl_settings" : {
+      "default": [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [0, 4],
+          "use_zsl" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [4, -1],
+          "use_zsl" : true
+        }
+      ],
+      "HDR" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [0, -1],
+          "use_zsl" : false
+        }
+      ],
+      "HDR_NO_ADRC" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [0, -1],
+          "use_zsl" : false
+        }
+      ],
+      "SUPER_REMOSAIC" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [0, -1],
+          "use_zsl" : false
+        }
+      ],
+      "SUPER_REMOSAIC_HDR" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [0, -1],
+          "use_zsl" : false
+        }
+      ]
+    },
+    "qc_mfnr_settings" : {
+      "default" : [
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [0, 4],
+          "number_of_frames" : 8,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 800,
+          "mfnr_burst_mode_enable" : true
+        },
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [4, 80],
+          "number_of_frames" : 8,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 400,
+          "mfnr_burst_mode_enable" : true
+        },
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [80, 1000],
+          "number_of_frames" : 5,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 400,
+          "mfnr_burst_mode_enable" : true
+        },
+        {
+          "zoom_range" : [0,2],
+          "lux_range" : [1000, -1],
+          "number_of_frames" : 3,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 400,
+          "mfnr_burst_mode_enable" : true
+        },
+        {
+          "zoom_range" : [2,-1],
+          "lux_range" : [0, 10000],
+          "number_of_frames" : 5,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 400,
+          "mfnr_burst_mode_enable" : true
+        },
+        {
+          "zoom_range" : [2,-1],
+          "lux_range" : [10000, -1],
+          "number_of_frames" : 3,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 400,
+          "mfnr_burst_mode_enable" : true
+        }
+      ],
+      "flash" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [0, -1],
+          "number_of_frames" : 5,
+          "anchor_selection_mode" : "TIMESTAMP",
+          "anchor_selection_algo" : "NON_FIXED",
+          "shutter_throttle_time" : 400,
+          "mfnr_burst_mode_enable" : false
+        }
+      ],
+      "exposure_schedule_lowlight" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_idx_range" : [470.0, 10000.0],
+          "exposure_time" : 250.0,
+          "code_override" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_idx_range" : [458.0, 470.0],
+          "exposure_time" : 200.0,
+          "code_override" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_idx_range" : [440.0, 458.0],
+          "exposure_time" : 167.0,
+          "code_override" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_idx_range" : [430.0, 440.0],
+          "exposure_time" : 125.0,
+          "code_override" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_idx_range" : [420.0, 430.0],
+          "exposure_time" : 100.0,
+          "code_override" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_idx_range" : [401.0, 420.0],
+          "exposure_time" : 80.0,
+          "code_override" : false
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_idx_range" : [302.0, 401.0],
+          "exposure_time" : 0,
+          "code_override" : true
+        },
+        {
+          "zoom_range" : [0,-1],
+          "lux_idx_range" : [0.0, 302.0],
+          "exposure_time" : 0,
+          "code_override" : false
+        }
+      ]
+    },
+    "scene_selection_overrides" : {
+      "bokeh" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [1.0,-1],
+          "override_scene" : "MULTI_FRAME_BOKEH"
+        }
+      ],
+      "hdr_off" : [
+        {
+          "zoom_range" : [0,0.7],
+          "lux_range" : [0,15000],
+          "override_scene" : "HAL_FRAME_STACK"
+        },
+        {
+          "zoom_range" : [0,0.7],
+          "lux_range" : [15000,-1],
+          "override_scene" : "FAST_NORMAL"
+        },
+        {
+          "zoom_range" : [0.7,0.99],
+          "lux_range" : [0,-1],
+          "override_scene" : "HAL_FRAME_STACK"
+        },
+        {
+          "zoom_range" : [2,-1],
+          "lux_range" : [0,-1],
+          "override_scene" : "SUPER_REMOSAIC"
+        },
+        {
+          "zoom_range" : [0.99,2],
+          "lux_range" : [0,8],
+          "override_scene" : "HAL_FRAME_STACK",
+          "front_camera_override_scene" : "HAL_FRAME_STACK_AILS"
+        },
+        {
+          "zoom_range" : [0.99,2],
+          "lux_range" : [8,15000],
+          "override_scene" : "HAL_FRAME_STACK"
+        },
+        {
+          "zoom_range" : [0.99,2],
+          "lux_range" : [15000,-1],
+          "override_scene" : "FAST_NORMAL"
+        }
+      ],
+      "hdr_auto_off" : [
+        {
+          "zoom_range" : [0,0.7],
+          "lux_range" : [0,15000],
+          "override_scene" : "HAL_FRAME_STACK"
+        },
+        {
+          "zoom_range" : [0,0.7],
+          "lux_range" : [15000,-1],
+          "override_scene" : "FAST_NORMAL"
+        },
+        {
+          "zoom_range" : [0.7,0.99],
+          "lux_range" : [0,-1],
+          "override_scene" : "HAL_FRAME_STACK"
+        },
+        {
+          "zoom_range" : [2,-1],
+          "lux_range" : [0,-1],
+          "override_scene" : "SUPER_REMOSAIC"
+        },
+        {
+          "zoom_range" : [0.99,2],
+          "lux_range" : [0,8],
+          "override_scene" : "HAL_FRAME_STACK",
+          "front_camera_override_scene" : "HAL_FRAME_STACK_AILS"
+        },
+        {
+          "zoom_range" : [0.99,2],
+          "lux_range" : [8,15000],
+          "override_scene" : "HAL_FRAME_STACK"
+        },
+        {
+          "zoom_range" : [0.99,2],
+          "lux_range" : [15000,-1],
+          "override_scene" : "FAST_NORMAL"
+        }
+      ],
+      "hdr_auto_on" : [
+        {
+          "zoom_range" : [0,0.7],
+          "lux_range" : [0,15000],
+          "override_scene" : "HDR_ADVANCED"
+        },
+        {
+          "zoom_range" : [0,0.7],
+          "lux_range" : [15000,-1],
+          "override_scene" : "HDR"
+        },
+        {
+          "zoom_range" : [0.7,0.99],
+          "lux_range" : [0,-1],
+          "override_scene" : "HDR"
+        },
+        {
+          "zoom_range" : [2,-1],
+          "lux_range" : [0,-1],
+          "override_scene" : "SUPER_REMOSAIC"
+        },
+        {
+          "zoom_range" : [0.99,2],
+          "lux_range" : [0,8],
+          "override_scene" : "HDR_ADVANCED",
+          "front_camera_override_scene" : "HDR_ADVANCED_AILS"
+        },
+        {
+          "zoom_range" : [0.99,2],
+          "lux_range" : [8,15000],
+          "override_scene" : "HDR_ADVANCED"
+        },
+        {
+          "zoom_range" : [0.99,2],
+          "lux_range" : [15000,-1],
+          "override_scene" : "HDR"
+        }
+      ],
+      "hdr_on" : [
+        {
+          "zoom_range" : [0,0.7],
+          "lux_range" : [0,15000],
+          "override_scene" : "HDR_ADVANCED"
+        },
+        {
+          "zoom_range" : [0,0.7],
+          "lux_range" : [15000,-1],
+          "override_scene" : "HDR"
+        },
+        {
+          "zoom_range" : [0.7,0.99],
+          "lux_range" : [0,-1],
+          "override_scene" : "HDR"
+        },
+        {
+          "zoom_range" : [2,-1],
+          "lux_range" : [0,-1],
+          "override_scene" : "HDR_ADVANCED"
+        },
+        {
+          "zoom_range" : [0.99,2],
+          "lux_range" : [0,8],
+          "override_scene" : "HDR_ADVANCED",
+          "front_camera_override_scene" : "HDR_ADVANCED_AILS"
+        },
+        {
+          "zoom_range" : [0.99,2],
+          "lux_range" : [8,15000],
+          "override_scene" : "HDR_ADVANCED"
+        },
+        {
+          "zoom_range" : [0.99,2],
+          "lux_range" : [15000,-1],
+          "override_scene" : "HDR"
+        }
+      ],
+      "flash" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [0,-1],
+          "override_scene" : "HAL_FRAME_STACK_FLASH"
+        }
+      ]
+    },
+    "auto_slow_capture" : [
+      {
+        "facing" : "back",
+        "zoom_range" : [0, -1],
+        "lux_range" : [0,3.78],
+        "scenes" : ["HAL_FRAME_STACK", "HAL_FRAME_STACK_FLASH", "HDR_ADVANCED"],
+        "time_estimate_threshold": 800
+      }
+    ],
+    "time_estimates" : [
+      {
+        "zoom_range" : [0,-1],
+        "lux_range" : [0, -1],
+        "time_estimate_coeff" : [ 80, 300, 1.22, 141, 250, 110]
+      }
+    ]
+  },
+  "capri": {
+    "software_flash": {
+      "delay_time": "150",
+      "color": "#ffffece0",
+      "alpha": "0.8f"
+    },
+    "scene_selection_overrides" : {
+      "bokeh" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [2.0,-1],
+          "override_scene" : "MULTI_FRAME_BOKEH"
+        }
+      ]
+    }
+  },
+  "caprip": {
+    "software_flash": {
+      "delay_time": "150",
+      "color": "#ffffece0",
+      "alpha": "0.8f"
+    },
+    "scene_selection_overrides" : {
+      "bokeh" : [
+        {
+          "zoom_range" : [0,-1],
+          "lux_range" : [2.0,-1],
+          "override_scene" : "MULTI_FRAME_BOKEH"
+        }
+      ]
+    }
+  }
+}

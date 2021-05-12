@@ -1,0 +1,973 @@
+{
+  //rear bayer | front | rear aux/mono
+  "smith" : {
+    "camera-config" :           ["back-main", "cli-logical", "cli-main", "front-main"],
+    "sensor-name" :             ["mot_s5kgm1sp", "mot_cli", "mot_s5kgm1sp_cli", "mot_s5k3t2sp"],
+    "physical-camera-count" : 3,
+    "buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,    12],
+      "outputBufferCnt" :       [  3,         3,         3,     3 ]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,    12 ],
+      "outputBufferCnt" :       [  4,         5,         5,     5  ]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  4,         12,         12,   12 ],
+      "outputBufferCnt" :       [  3,         5,          5,    5  ]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  7,         3,          3,    3  ],
+      "outputBufferCnt" :       [  2,         12,         12,   12 ]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  1,         1,         1,     1 ]
+    },
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [  2,     2,     2,     2  ],
+      "single-normal-override" :      [  2,     2,     2,     2  ],
+      "single-special-override" :     [  2,     2,     2,     2  ],
+      "single-cam-mode-slip" :        [  4,     4,     4,     4  ],
+      "dual-cam-mode" :               [  2,     2,     2,     2  ],
+      "dual-depth-cam-mode" :         [  3,     3,     3,     3  ],
+      "zoom-override-single-slip" :   [[[]],      [[]],    [[]],     [[]] ]
+    },
+    "snapshot-min-interval" :   0,    // in ms
+    "remosaic-config" : {
+      "gain-only-qcfa-decision" : false,
+      "analog-gain-threshold" : [  2.0  ],
+      "single-session-remosaic-estimate" : 3000
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-default" : [ 30,      30,      30,     30 ],
+      "preview-rate-limit-lvl-1" : [ 24,      24,      24,     24 ],
+      "preview-rate-limit-lvl-2" : [ 15,      15,      15,     15 ],
+      "preview-rate-depth" :       [ 15,      15,      15,     15 ]
+    },
+    "max-multishot-rate" :      [ 5.0,      5.0,      5.0,      5.0  ],
+    "lowmem-kill-size-mb" :     [ 1000,     1000,     1000,     1000 ],
+    "extra-free-mem-size-mb" :  [ 150,      150,      150,      150  ],
+    "sf-bokeh-zoom-factor" :    [ 1.0,      1.0,      1.0,      1.0  ],
+    "high-resolution-output" :  [ true,     false,     false,   false],
+    "hq-preview":               [ true,     true,     true,     true ],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "custom-noise-reduction" :  [ true,    true,    true,    true],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["qsm8250", "qsm8250", "qsm8250", "qsm8250"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 3000,
+    "disable-zsl-on-scenes" : ["HDR_NO_ADRC", "SF_BOKEH", "HDR", "HDR_ADVANCED", "SUPER_NIGHT",
+                               "SUPER_PORTRAIT", "FLASH", "DISPLAY_FLASH"]
+  },
+  "liber" : {
+    "camera-config" :           ["back-main", "front-main", "back-depth-1x", "back-wide", "back-macro", "back-depth-1x", "back-zoom", "mfnr-zoom"],
+    "physical-camera-count" : 5,
+    "buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,        12,        12,        12,        12,        12],
+      "outputBufferCnt" :       [  3,          3,         5,         5,         5,         5,         3,         3]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,        12,        12,        12,        12,        12],
+      "outputBufferCnt" :       [  4,          5,         1,         1,         1,         1,         4,         4]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  4,         12,         4,         4,         4,         4,         4,         4],
+      "outputBufferCnt" :       [  3,          5,         1,         1,         3,         3,         3,         3]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  7,         3,          7,         7,         7,         7,         7,         7],
+      "outputBufferCnt" :       [  2,         12,         2,         2,         2,         2,         2,         2]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  1,         1,          1,         1,         1,         1,         1,         1]
+    },
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [2,         2,        2,        2,        2,        2,        2,        2],
+      "single-normal-override" :      [2,         2,        2,        2,        2,        2,        2,        2],
+      "single-special-override" :     [2,         2,        2,        2,        2,        2,        2,        2],
+      "single-cam-mode-slip" :        [0,         0,        0,        0,        0,        0,        0,        0],
+      "dual-cam-mode" :               [2,         2,        2,        2,        2,        2,        2,        2],
+      "dual-depth-cam-mode" :         [3,         3,        3,        3,        3,        3,        3,        3],
+      "zoom-override-single-slip" :   [[[]],        [[]],       [[]],       [[]],       [[]],       [[]],       [[]],       [[]]]
+    },
+    "snapshot-min-interval" :   0,    // in ms
+    "remosaic-config" : {
+      "analog-gain-threshold" : [  2.0  ]
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-lvl-1" : [ 24,      24,        24,        24,        24,        24,        24,        24],
+      "preview-rate-limit-lvl-2" : [ 15,      15,        15,        15,        15,        15,        15,        15],
+      "preview-rate-depth" :       [ 15,      15,        15,        15,        15,        15,        15,        15]
+    },
+    "max-multishot-rate" :      [ 5.0,       5.0,       5.0,       5.0,       5.0,       5.0,       5.0,       5.0],
+    "lowmem-kill-size-mb" :     [ 1000,     1000,      1000,      1000,      1000,      1000,      1000,      1000],
+    "extra-free-mem-size-mb" :  [  150,      150,       150,       150,       150,       150,       150,       150],
+    "sf-bokeh-zoom-factor" :    [  1.0,      1.0,       1.0,       1.0,       1.0,       1.0,       1.0,       1.0],
+    "high-resolution-output" :  [ true,     false,     true,      true,      true,      true,      true,      true],
+    "hq-preview":               [ true,      true,     true,      true,      true,      true,      true,      true],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "zoom-blending-segments" : [ 0.504,  1.0,  0],
+    "custom-noise-reduction" :  [ false,    false,    false,     false,     false,     false,     false,     false],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["default", "default", "default", "default", "default", "default", "default", "default"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 3000,
+    "disable-zsl-on-scenes" : ["HDR_NO_ADRC", "HDR", "HDR_ADVANCED", "SUPER_NIGHT", "RELIGHTING", "SUPER_PORTRAIT", "FLASH"],
+    "torch-control-enable" :   [false,     false,     false,     false,     false,     false,      false,    false]
+  },
+  "guamna" : {
+    "camera-config" :           [ "back-main", "front-main", "back-depth", "back-logical-depth"],
+    "physical-camera-count" : 3,
+    "buffer-config" : {
+      "inputBufferCnt" :        [  8,          8,         8,        8  ],
+      "outputBufferCnt" :       [  3,          3,         3,        3  ]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,        12 ],
+      "outputBufferCnt" :       [  4,          5,         4,         4 ]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  4,         12,         4,         4 ],
+      "outputBufferCnt" :       [  3,          5,         3,         3 ]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  7,         3,          7,         7 ],
+      "outputBufferCnt" :       [  2,         12,         2,         2 ]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  1,         1,          1,         1 ]
+    },
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [  2,     2,     2,     2  ],
+      "single-normal-override" :      [  2,     2,     2,     2  ],
+      "single-special-override" :     [  2,     2,     2,     2  ],
+      "single-cam-mode-slip" :        [  0,     0,     0,     0  ],
+      "dual-cam-mode" :               [  2,     2,     2,     2  ],
+      "dual-depth-cam-mode" :         [  2,     2,     2,     2  ],
+      "zoom-override-single-slip" :   [[[]],      [[]],    [[]],    [[]] ]
+    },
+    "snapshot-min-interval" :   100,    // in ms
+    "remosaic-config" : {
+      "gain-only-qcfa-decision" : true,
+      "analog-gain-threshold" : [  2.0  ],
+      "single-session-remosaic-estimate" : 3000
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-default" : [ 30,      30,        30,        30 ],
+      "preview-rate-limit-lvl-1" : [ 24,      24,        24,        24 ],
+      "preview-rate-limit-lvl-2" : [ 15,      15,        15,        15 ],
+      "preview-rate-depth" :    [ 15,         15,        15,        15 ]
+    },
+    "max-multishot-rate" :      [ 5.0,       5.0,       5.0,       5.0 ],
+    "lowmem-kill-size-mb" :     [ 1000,     1000,      1000,      1000 ],
+    "extra-free-mem-size-mb" :  [  150,      150,       150,       150 ],
+    "sf-bokeh-zoom-factor" :    [  1.0,      1.0,       1.0,       1.0 ],
+    "high-resolution-output" :  [true,       false,     true,      true],
+    "hq-preview":               [true,       true,      true,      true],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "custom-noise-reduction" :  [false,     false,     false,     false],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["qsm8250", "qsm8250", "qsm8250", "qsm8250"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 3000,
+    "disable-zsl-on-scenes" : ["HDR_NO_ADRC", "SF_BOKEH", "HDR", "HDR_ADVANCED", "SUPER_NIGHT",
+                               "SUPER_RESOLUTION","SUPER_PORTRAIT", "FLASH", "DISPLAY_FLASH"]
+  },
+  "ginna" : {
+    "camera-config" :           [ "back-main", "front-main", "back-depth", "back-logical-depth"],
+    "physical-camera-count" : 3,
+    "buffer-config" : {
+      "inputBufferCnt" :        [  8,          8,         8,        8  ],
+      "outputBufferCnt" :       [  3,          3,         3,        3  ]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,        12 ],
+      "outputBufferCnt" :       [  4,          5,         4,         4 ]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  4,         12,         4,         4 ],
+      "outputBufferCnt" :       [  3,          5,         3,         3 ]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  7,         3,          7,         7 ],
+      "outputBufferCnt" :       [  2,         12,         2,         2 ]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  1,         1,          1,         1 ]
+    },
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [  2,     2,     2,     2  ],
+      "single-normal-override" :      [  2,     2,     2,     2  ],
+      "single-special-override" :     [  2,     2,     2,     2  ],
+      "single-cam-mode-slip" :        [  0,     0,     0,     0  ],
+      "dual-cam-mode" :               [  2,     2,     2,     2  ],
+      "dual-depth-cam-mode" :         [  2,     2,     2,     2  ],
+      "zoom-override-single-slip" :   [[[]],      [[]],    [[]],    [[]] ]
+    },
+    "snapshot-min-interval" :   100,    // in ms
+    "remosaic-config" : {
+      "gain-only-qcfa-decision" : true,
+      "analog-gain-threshold" : [  2.0  ],
+      "single-session-remosaic-estimate" : 3000
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-default" : [ 30,      30,        30,        30 ],
+      "preview-rate-limit-lvl-1" : [ 24,      24,        24,        24 ],
+      "preview-rate-limit-lvl-2" : [ 15,      15,        15,        15 ],
+      "preview-rate-depth" :    [ 15,         15,        15,        15 ]
+    },
+    "max-multishot-rate" :      [ 5.0,       5.0,       5.0,       5.0 ],
+    "lowmem-kill-size-mb" :     [ 1000,     1000,      1000,      1000 ],
+    "extra-free-mem-size-mb" :  [  150,      150,       150,       150 ],
+    "sf-bokeh-zoom-factor" :    [  1.0,      1.0,       1.0,       1.0 ],
+    "high-resolution-output" :  [true,       false,     true,      true],
+    "hq-preview":               [true,       true,      true,      true],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "custom-noise-reduction" :  [false,     false,     false,     false],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["qsm8250", "qsm8250", "qsm8250", "qsm8250"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 3000,
+    "disable-zsl-on-scenes" : ["HDR_NO_ADRC", "SF_BOKEH", "HDR", "HDR_ADVANCED", "SUPER_NIGHT",
+                               "SUPER_RESOLUTION","SUPER_PORTRAIT", "FLASH", "DISPLAY_FLASH"]
+  },
+  "guamna_2GB" : {
+    "camera-config" :           [ "back-main", "front-main", "back-depth", "back-logical-depth"],
+    "physical-camera-count" : 3,
+    "buffer-config" : {
+      "inputBufferCnt" :        [  6,          6,         6,        6  ],
+      "outputBufferCnt" :       [  2,          1,         1,        1  ]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,        12 ],
+      "outputBufferCnt" :       [  4,          5,         4,         1 ]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  2,          2,         2,        2  ],
+      "outputBufferCnt" :       [  1,          1,         1,        1  ]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  7,         3,          7,         7 ],
+      "outputBufferCnt" :       [  2,         12,         2,         2 ]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  3,         3,          3,         3 ]
+    },
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [  2,     2,     2,     2  ],
+      "single-normal-override" :      [  2,     2,     2,     2  ],
+      "single-special-override" :     [  2,     2,     2,     2  ],
+      "single-cam-mode-slip" :        [  0,     0,     0,     0  ],
+      "dual-cam-mode" :               [  2,     2,     2,     2  ],
+      "dual-depth-cam-mode" :         [  1,     1,     1,     1  ],
+      "zoom-override-single-slip" :   [[[]],      [[]],    [[]],    [[]] ]
+    },
+    "snapshot-min-interval" :   300,    // in ms
+    "remosaic-config" : {
+      "gain-only-qcfa-decision" : true,
+      "analog-gain-threshold" : [  2.0  ],
+      "single-session-remosaic-estimate" : 3000
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-default" : [ 30,      30,        30,        30 ],
+      "preview-rate-limit-lvl-1" : [ 24,      24,        24,        24 ],
+      "preview-rate-limit-lvl-2" : [ 15,      15,        15,        15 ],
+      "preview-rate-depth" :    [ 15,         15,        15,        15 ]
+    },
+    "max-multishot-rate" :      [ 5.0,       5.0,       5.0,       5.0 ],
+    "lowmem-kill-size-mb" :     [ 750,       750,       750,       750 ],
+    "extra-free-mem-size-mb" :  [ 150,       150,       150,       150 ],
+    "sf-bokeh-zoom-factor" :    [  1.0,      1.0,       1.0,       1.0 ],
+    "high-resolution-output" :  [true,       false,     true,      true],
+    "hq-preview":               [true,       true,      true,      true],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "custom-noise-reduction" :  [false,     false,     false,     false],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["qsm8250", "qsm8250", "qsm8250", "qsm8250"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 3000,
+    "disable-zsl-on-scenes" : ["NORMAL","LOW_LIGHT","SUPER_RESOLUTION","HDR_NO_ADRC", "SF_BOKEH",
+      "HDR", "HDR_ADVANCED", "SUPER_NIGHT", "SUPER_PORTRAIT", "FLASH", "DISPLAY_FLASH"]
+  },
+  "guam" : {
+    "camera-config" :           [ "back-main", "front-main", "back-depth", "back-logical-depth"],
+    "physical-camera-count" : 3,
+    "buffer-config" : {
+      "inputBufferCnt" :        [  12,         12,        12,       12 ],
+      "outputBufferCnt" :       [  3,          3,         3,        3  ]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,        12 ],
+      "outputBufferCnt" :       [  4,          5,         4,         4 ]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  4,         12,         4,         4 ],
+      "outputBufferCnt" :       [  3,          5,         3,         3 ]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  7,         3,          7,         7 ],
+      "outputBufferCnt" :       [  2,         12,         2,         2 ]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  1,         1,          1,         1 ]
+    },
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [  2,     2,     2,     2  ],
+      "single-normal-override" :      [  2,     2,     2,     2  ],
+      "single-special-override" :     [  2,     2,     2,     2  ],
+      "single-cam-mode-slip" :        [  0,     0,     0,     0  ],
+      "dual-cam-mode" :               [  2,     2,     2,     2  ],
+      "dual-depth-cam-mode" :         [  2,     2,     2,     2  ],
+      "zoom-override-single-slip" :   [[[]],      [[]],    [[]],    [[]] ]
+    },
+    "snapshot-min-interval" :   100,    // in ms
+    "remosaic-config" : {
+      "gain-only-qcfa-decision" : true,
+      "analog-gain-threshold" : [  2.0  ],
+      "single-session-remosaic-estimate" : 3000
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-default" : [ 30,      30,        30,        30 ],
+      "preview-rate-limit-lvl-1" : [ 24,      24,        24,        24 ],
+      "preview-rate-limit-lvl-2" : [ 15,      15,        15,        15 ],
+      "preview-rate-depth" :    [ 15,         15,        15,        15 ]
+    },
+    "max-multishot-rate" :      [ 5.0,       5.0,       5.0,       5.0 ],
+    "lowmem-kill-size-mb" :     [ 1000,     1000,      1000,      1000 ],
+    "extra-free-mem-size-mb" :  [  150,      150,       150,       150 ],
+    "sf-bokeh-zoom-factor" :    [  1.0,      1.0,       1.0,       1.0 ],
+    "high-resolution-output" :  [true,       false,     true,      true],
+    "hq-preview":               [true,       true,      true,      true],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "custom-noise-reduction" :  [false,     false,     false,     false],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["qsm8250", "qsm8250", "qsm8250", "qsm8250"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 3000,
+    "disable-zsl-on-scenes" : ["HDR_NO_ADRC", "HDR", "HDR_ADVANCED", "SUPER_NIGHT", "RELIGHTING",
+      "SUPER_PORTRAIT", "FLASH", "DISPLAY_FLASH"]
+  },
+  "borneo" : {
+    "camera-config" :           [ "back-main", "front-main", "back-depth", "back-macro", "back-logical-depth"],
+    "physical-camera-count" : 4,
+    "buffer-config" : {
+      "inputBufferCnt" :        [  9,         12,        12,        12,       12 ],
+      "outputBufferCnt" :       [  3,          3,         3,         3,        3  ]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,        12,        12 ],
+      "outputBufferCnt" :       [  4,          5,         4,         4,         4 ]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  4,         12,         4,         4,         4 ],
+      "outputBufferCnt" :       [  3,          5,         3,         3,         3 ]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  7,         3,          7,         7,         7 ],
+      "outputBufferCnt" :       [  2,         12,         2,         2,         2 ]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  1,         1,          1,         1,         1 ]
+    },
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [  2,     2,     2,     2,     2  ],
+      "single-normal-override" :      [  2,     2,     2,     2,     2  ],
+      "single-special-override" :     [  2,     2,     2,     2,     2  ],
+      "single-cam-mode-slip" :        [  4,     4,     4,     4,     4  ],
+      "dual-cam-mode" :               [  2,     2,     2,     2,     2  ],
+      "dual-depth-cam-mode" :         [  2,     2,     2,     2,     2  ],
+      "zoom-override-single-slip" :   [[[]],      [[]],    [[]],    [[]],    [[]] ]
+    },
+    "snapshot-min-interval" :   100,    // in ms
+    "remosaic-config" : {
+      "gain-only-qcfa-decision" : true,
+      "analog-gain-threshold" : [  2.0  ],
+      "single-session-remosaic-estimate" : 3000
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-default" : [ 30,      30,        30,        30,        30 ],
+      "preview-rate-limit-lvl-1" : [ 24,      24,        24,        24,        24 ],
+      "preview-rate-limit-lvl-2" : [ 15,      15,        15,        15,        15 ],
+      "preview-rate-depth" :    [ 15,         15,        15,        15,        15 ]
+    },
+    "max-multishot-rate" :      [ 5.0,       5.0,       5.0,       5.0,       5.0 ],
+    "lowmem-kill-size-mb" :     [ 1000,     1000,      1000,      1000,      1000 ],
+    "extra-free-mem-size-mb" :  [  150,      150,       150,       150,       150 ],
+    "sf-bokeh-zoom-factor" :    [  1.0,      1.0,       1.0,       1.0,       1.0 ],
+    "high-resolution-output" :  [true,     false,     true,     true,     true],
+    "hq-preview":               [true,     true,      true,     true,     true],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "custom-noise-reduction" :  [false,     false,     false,     false,     false],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 3000,
+    "display-cutouts-coordinates": [{"x":63.6, "y":44.4}],
+    "display-cutout-configs": [77, 54, 0.4, 0.2], //Grown circle size, Shrunken circle size, Grown circl alpha, Shrunken circle alpha
+    "disable-zsl-on-scenes" : ["HDR_NO_ADRC", "HDR", "HDR_ADVANCED", "SUPER_NIGHT",
+                               "SUPER_PORTRAIT", "FLASH", "DISPLAY_FLASH"]
+  },
+  "borneo_3GB" : {
+    "camera-config" :           [ "back-main", "front-main", "back-depth", "back-macro", "back-logical-depth"],
+    "physical-camera-count" : 4,
+    "buffer-config" : {
+      "inputBufferCnt" :        [  8,          9,         6,         6,        6 ],
+      "outputBufferCnt" :       [  2,          1,         1,         1,        1 ]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,        12,        12 ],
+      "outputBufferCnt" :       [  4,          5,         4,         4,         4 ]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  3,         12,         3,         4,         3 ],
+      "outputBufferCnt" :       [  2,          5,         1,         3,         1 ]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  7,         3,          7,         7,         7 ],
+      "outputBufferCnt" :       [  2,         12,         2,         2,         2 ]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  3,         3,          3,         3,         3 ]
+    },
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [  2,     2,     2,     2,     2  ],
+      "single-normal-override" :      [  2,     2,     2,     2,     2  ],
+      "single-special-override" :     [  2,     2,     2,     2,     2  ],
+      "single-cam-mode-slip" :        [  4,     4,     4,     4,     4  ],
+      "dual-cam-mode" :               [  2,     2,     2,     2,     2  ],
+      "dual-depth-cam-mode" :         [  2,     2,     2,     2,     2  ],
+      "zoom-override-single-slip" :   [[[]],      [[]],    [[]],    [[]],    [[]] ]
+    },
+    "max-concurrent-jobs-by-scene": {
+      "MODE_SUPER_NIGHT" : 1,
+      "MODE_SUPER_PORTRAIT" : 1
+    },
+    "max-concurrent-slip" : {
+      "MODE_SUPER_NIGHT": 0,
+      "MODE_SUPER_PORTRAIT" : 0
+    },
+    "snapshot-min-interval" :   300,    // in ms
+    "remosaic-config" : {
+      "gain-only-qcfa-decision" : true,
+      "analog-gain-threshold" : [  2.0  ],
+      "single-session-remosaic-estimate" : 3000
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-default" : [ 30,      30,        30,        30,        30 ],
+      "preview-rate-limit-lvl-1" : [ 24,      24,        24,        24,        24 ],
+      "preview-rate-limit-lvl-2" : [ 15,      15,        15,        15,        15 ],
+      "preview-rate-depth" :       [ 15,      15,        15,        15,        15 ]
+    },
+    "max-multishot-rate" :      [ 5.0,       5.0,       5.0,       5.0,       5.0 ],
+    "lowmem-kill-size-mb" :     [ 1000,     1000,      1000,      1000,      1000 ],
+    "extra-free-mem-size-mb" :  [  150,      150,       150,       150,       150 ],
+    "sf-bokeh-zoom-factor" :    [  1.0,      1.0,       1.0,       1.0,       1.0 ],
+    "high-resolution-output" :  [true,     false,     true,     true,     true],
+    "hq-preview":               [true,     true,      true,     true,     true],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "custom-noise-reduction" :  [false,     false,     false,     false,     false],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 3000,
+    "display-cutouts-coordinates": [{"x":63.6, "y":44.4}],
+    "display-cutout-configs": [77, 54, 0.4, 0.2],
+    "disable-zsl-on-scenes" : ["HDR_NO_ADRC", "HDR", "HDR_ADVANCED", "SUPER_NIGHT", "RELIGHTING",
+      "SUPER_PORTRAIT", "FLASH", "DISPLAY_FLASH"]
+  },
+  "kiev" : {
+    "camera-config" :           ["back-main", "front-main", "back-wide", "back-macro", "back-depth-1x", "back-zoom"],
+    "physical-camera-count" : 4,
+    "buffer-config" : {
+      "inputBufferCnt" :        [ 11,         12,       12,        12,        12,        12],
+      "outputBufferCnt" :       [  2,          3,        5,         5,         3,         3]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,       12,        12,        12,        12],
+      "outputBufferCnt" :       [  4,          5,        1,         1,         4,         4]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  4,         12,        4,         4,         4,         4],
+      "outputBufferCnt" :       [  3,          5,        3,         3,         3,         3]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  7,         3,         7,         7,         7,         7],
+      "outputBufferCnt" :       [  2,         12,        2,         2,         2,         2]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  1,         1,         1,         1,         1,         1]
+    },
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [  2,     2,     2,     2,     2,     2  ],
+      "single-normal-override" :      [  2,     2,     2,     2,     2,     2  ],
+      "single-special-override" :     [  2,     2,     2,     2,     2,     2  ],
+      "single-cam-mode-slip" :        [  0,     0,     0,     0,     0,     0  ],
+      "dual-cam-mode" :               [  2,     2,     2,     2,     2,     2  ],
+      "dual-depth-cam-mode" :         [  3,     3,     3,     3,     3,     3  ],
+      "zoom-override-single-slip" :   [[[]],      [[]],    [[]],    [[]],    [[]],    [[]] ]
+    },
+    "snapshot-min-interval" :   0,    // in ms
+    "remosaic-config" : {
+      "gain-only-qcfa-decision" : true,
+      "analog-gain-threshold" : [  2.0  ],
+      "single-session-remosaic-estimate" : 3000
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-default" : [ 30,      30,        30,        30,        30,        30],
+      "preview-rate-limit-lvl-1" : [ 24,      24,        24,        24,        24,        24],
+      "preview-rate-limit-lvl-2" : [ 15,      15,        15,        15,        15,        15],
+      "preview-rate-depth" :       [ 15,      15,        15,        15,        15,        15]
+    },
+    "max-multishot-rate" :      [ 5.0,       5.0,       5.0,       5.0,       5.0,       5.0],
+    "lowmem-kill-size-mb" :     [ 1200,     1200,      1200,      1200,      1200,      1200],
+    "extra-free-mem-size-mb" :  [  150,      150,       150,       150,       150,       150],
+    "sf-bokeh-zoom-factor" :    [  1.0,      1.0,       1.0,       1.0,       1.0,       1.0],
+    "high-resolution-output" :  [ true,     false,     true,      true,      true,      true],
+    "hq-preview":               [ true,      true,     true,      true,      true,      true],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "zoom-blending-segments" : [ 0.504,  1.0,  0],
+    "custom-noise-reduction" :  [ false,    false,    false,    false,     false,     false],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 3000,
+    "display-cutouts-coordinates": [{"x":540.45, "y":63.9}],
+    "display-cutout-configs": [110, 77, 0.2, 0.1],
+    "disable-zsl-on-scenes" : ["HDR_NO_ADRC", "HDR", "HDR_ADVANCED", "SUPER_NIGHT",
+                               "SUPER_PORTRAIT", "FLASH", "DISPLAY_FLASH"]
+  },
+  "minsk" : {
+    "camera-config" :           ["back-main", "front-main", "back-depth_1x", "back-wide", "back-macro", "back-depth-1x", "back-zoom", "mfnr-zoom"],
+    "physical-camera-count" : 5,
+    "buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,        12,        12,        12,        12,        12],
+      "outputBufferCnt" :       [  3,          3,         5,         5,         5,         5,         3,         3]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,        12,        12,        12,        12,        12],
+      "outputBufferCnt" :       [  4,          5,         1,         1,         1,         1,         4,         4]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  4,         12,         4,         4,         4,         4,         4,         4],
+      "outputBufferCnt" :       [  3,          5,         1,         1,         3,         3,         3,         3]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  7,         3,          7,         7,         7,         7,         7,         7],
+      "outputBufferCnt" :       [  2,         12,         2,         2,         2,         2,         2,         2]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  1,         1,          1,         1,         1,         1,         1,         1]
+    },
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [  2,       2,      2,      2,      2,      2,      2,      2  ],
+      "single-normal-override" :      [  2,       2,      2,      2,      2,      2,      2,      2  ],
+      "single-special-override" :     [  2,       2,      2,      2,      2,      2,      2,      2  ],
+      "single-cam-mode-slip" :        [  0,       0,      0,      0,      0,      0,      0,      0  ],
+      "dual-cam-mode" :               [  2,       2,      2,      2,      2,      2,      2,      2  ],
+      "dual-depth-cam-mode" :         [  3,       3,      3,      3,      3,      3,      3,      3  ],
+      "zoom-override-single-slip" :   [[[]],        [[]],     [[]],     [[]],     [[]],     [[]],     [[]],     [[]]]
+    },
+    "max-concurrent-jobs-by-scene": {
+      "MODE_SUPER_NIGHT" : 1
+    },
+    "max-concurrent-slip" : {
+      "MODE_SUPER_NIGHT": 0
+    },
+    "snapshot-min-interval" :   0,    // in ms
+    "remosaic-config" : {
+      "gain-only-qcfa-decision" : true,
+      "analog-gain-threshold" : [  2.0  ],
+      "single-session-remosaic-estimate" : 3000
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-default" : [ 30,      30,        30,        30,        30,        30,        30,        30],
+      "preview-rate-limit-lvl-1" : [ 24,      24,        24,        24,        24,        24,        24,        24],
+      "preview-rate-limit-lvl-2" : [ 15,      15,        15,        15,        15,        15,        15,        15],
+      "preview-rate-depth" :       [ 15,      15,        15,        15,        15,        15,        15,        15]
+    },
+    "max-multishot-rate" :      [ 5.0,       5.0,       5.0,       5.0,       5.0,       5.0,       5.0,       5.0],
+    "lowmem-kill-size-mb" :     [ 1000,     1000,      1000,      1000,      1000,      1000,      1000,      1000],
+    "extra-free-mem-size-mb" :  [  150,      150,       150,       150,       150,       150,       150,       150],
+    "sf-bokeh-zoom-factor" :    [  1.0,      1.0,       1.0,       1.0,       1.0,       1.0,       1.0,       1.0],
+    "high-resolution-output" :  [ true,     false,     true,      true,      true,      true,      true,      true],
+    "hq-preview":               [ true,      true,     true,      true,      true,      true,      true,      true],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "zoom-blending-segments" : [ 0.504,  1.0,  0],
+    "custom-noise-reduction" :  [ false,    false,    false,     false,     false,     false,     false,     false],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["default", "default", "default", "default", "default", "default", "default", "default"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 3000,
+    "display-cutouts-coordinates": [{"x":86.2, "y":58.6}],
+    "display-cutout-configs": [110, 77, 0.2, 0.1],
+    "disable-zsl-on-scenes" : ["HDR_NO_ADRC", "HDR", "HDR_ADVANCED", "SUPER_NIGHT",
+                              "SUPER_PORTRAIT", "FLASH", "DISPLAY_FLASH"]
+  },
+  "cebu" : {
+    "camera-config" :           [ "back-main", "front-main", "back-depth", "back-macro", "back-logical-depth"],
+    "physical-camera-count" : 4,
+    "buffer-config" : {
+      "inputBufferCnt" :        [  12,         12,        12,        12,       12 ],
+      "outputBufferCnt" :       [  3,          3,         3,         3,        3  ]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,        12,        12 ],
+      "outputBufferCnt" :       [  4,          5,         4,         4,         4 ]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  4,         12,         4,         4,         4 ],
+      "outputBufferCnt" :       [  3,          5,         3,         3,         3 ]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  7,         3,          7,         7,         7 ],
+      "outputBufferCnt" :       [  2,         12,         2,         2,         2 ]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  1,         1,          1,         1,         1 ]
+    },
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [  2,     2,     2,     2,     2  ],
+      "single-normal-override" :      [  2,     2,     2,     2,     2  ],
+      "single-special-override" :     [  2,     2,     2,     2,     2  ],
+      "single-cam-mode-slip" :        [  4,     4,     4,     4,     4  ],
+      "dual-cam-mode" :               [  2,     2,     2,     2,     2  ],
+      "dual-depth-cam-mode" :         [  2,     2,     2,     2,     2  ],
+      "zoom-override-single-slip" :   [[[]],      [[]],    [[]],    [[]],    [[]] ]
+    },
+    "max-concurrent-jobs-by-scene": {
+      "MODE_SUPER_NIGHT" : 1,
+      "MODE_PHOTO_SINGLE_SESSION_REMOSAIC": 1
+    },
+    "max-concurrent-slip" : {
+      "MODE_SUPER_NIGHT": 0,
+      "MODE_PHOTO_SINGLE_SESSION_REMOSAIC": 0
+    },
+    "mcf-slow-capture-modes" : [ "MODE_PHOTO_SINGLE_SESSION_REMOSAIC" ],
+    "snapshot-min-interval" :   100,    // in ms
+    "remosaic-config" : {
+      "gain-only-qcfa-decision" : true,
+      "analog-gain-threshold" : [  2.0  ],
+      "single-session-remosaic-estimate" : 3000
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-default" : [ 30,      30,        30,        30,        30 ],
+      "preview-rate-limit-lvl-1" : [ 24,      24,        24,        24,        24 ],
+      "preview-rate-limit-lvl-2" : [ 15,      15,        15,        15,        15 ],
+      "preview-rate-depth" :    [ 15,         15,        15,        15,        15 ]
+    },
+    "max-multishot-rate" :      [ 5.0,       5.0,       5.0,       5.0,       5.0 ],
+    "lowmem-kill-size-mb" :     [ 1200,     1200,      1200,      1200,      1200 ],
+    "extra-free-mem-size-mb" :  [  150,      150,       150,       150,       150 ],
+    "sf-bokeh-zoom-factor" :    [  1.0,      1.0,       1.0,       1.0,       1.0 ],
+    "high-resolution-output" :  [true,     false,     true,     true,     true],
+    "hq-preview":               [true,     true,      true,     true,     true],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "custom-noise-reduction" :  [false,     false,     false,     false,     false],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 3000,
+    "display-cutouts-coordinates": [{"x":61.7, "y":45.8}],
+    "display-cutout-configs": [77, 54, 0.4, 0.2],
+    "disable-zsl-on-scenes" : ["HDR_NO_ADRC", "HDR", "HDR_ADVANCED", "SUPER_NIGHT",
+                              "SUPER_PORTRAIT", "FLASH", "DISPLAY_FLASH"],
+    "skin-tone-detection" : {
+      "enabled" : false,
+      "country-mapping" : {
+        "in" : "SOUTH_ASIA"
+      },
+      "sku-mapping" : {}
+    }
+  },
+  "nio" : {
+    "camera-config" : [ "back-main","front-main", "back-wide","back-depth-video", "back-ultra_wide",  "front-ultra_wide",   "back-depth_1x", "back-zoom"],
+    "physical-camera-count" : 5,
+    "buffer-config" : {
+      "inputBufferCnt" :        [ 20,         15,        15,        15,        15,        15,        15,        15],
+      "outputBufferCnt" :       [  3,          3,         5,         3,         3,         3,         3,         3]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,        12,        12,        12,        12,        12],
+      "outputBufferCnt" :       [  4,          5,         1,         4,         4,         4,         4,         4]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,          12,        12,       12,         12,        12,         12,         12],
+      "outputBufferCnt" :       [ 4,           5,         4,        4,          4,          4,          4,          4]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [ 7,          3,          7,        7,          7,          7,          7,          7],
+      "outputBufferCnt" :       [ 2,          12,         2,        2,          2,          2,          2,          2]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  1,         1,          1,        1,          1,          1,          1,          1]
+    },
+    "display-cutouts-coordinates": [{"x":201.9937, "y": 74.996185}, {"x":83.00249, "y":74.996185}], // 0:standard, 1:wide
+    "display-cutout-configs": [120, 87, 0.2, 0.1],
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [  4,     4,     4,     4,     4,     4,     4,     4  ],
+      "single-normal-override" :      [  4,     4,     4,     4,     4,     4,     4,     4  ],
+      "single-special-override" :     [  2,     2,     2,     2,     2,     2,     2,     2  ],
+      "single-cam-mode-slip" :        [  0,     0,     0,     0,     0,     0,     0,     0  ],
+      "dual-cam-mode" :               [  2,     2,     2,     2,     2,     2,     2,     2  ],
+      "dual-depth-cam-mode" :         [  3,     3,     3,     3,     3,     3,     3,     3  ],
+      "zoom-override-single-slip" :   [[[]],      [[]],    [[]],    [[]],    [[]],    [[]],    [[]],    [[]] ]
+    },
+    "snapshot-min-interval" :   0,    // in ms
+    "remosaic-config" : {
+      "gain-only-qcfa-decision" : false,
+      "analog-gain-threshold" : [  2.0  ],
+      "single-session-remosaic-estimate" : 1000
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-default" : [ 30,      30,        30,        30,       30,       30,       30,       30],
+      "preview-rate-limit-lvl-1" : [ 24,      24,        24,        24,       24,       24,       24,       24],
+      "preview-rate-limit-lvl-2" : [ 15,      15,        15,        15,       15,       15,       15,       15],
+      "preview-rate-depth" :       [ 15,      15,        15,        15,       15,       15,       15,       15]
+    },
+    "max-multishot-rate" :      [ 5.0,       5.0,        5.0,       5.0,       5.0,       5.0,       5.0,       5.0],
+    "lowmem-kill-size-mb" :     [ 1500,     1500,       1500,      1500,      1500,      1500,      1500,      1500],
+    "extra-free-mem-size-mb" :  [  200,      200,        200,       200,       200,       200,       200,       200],
+    "sf-bokeh-zoom-factor" :    [  1.0,      1.0,        1.0,       1.0,       1.0,       1.0,       1.0,       1.0],
+    "high-resolution-output" :  [ true,      true,      true,      true,      true,      true,      true,      true],
+    "hq-preview":               [ true,      true,      true,      true,      true,      true,      true,      true],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "zoom-blending-segments" : [ 0.502,  1.0,  2.0],
+    "custom-noise-reduction" :  [true,      true,      true,      false,     true,      true,      true,      true],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 1000,
+    "disable-zsl-on-scenes" : ["HDR_NO_ADRC", "SF_BOKEH", "HDR", "HDR_ADVANCED", "SUPER_NIGHT", "RELIGHTING",
+      "SUPER_PORTRAIT", "FLASH", "DISPLAY_FLASH"],
+    "torch-control-enable" :   [false,     false,     true,     false,    false,       false,     false,     false],
+    "torch-control" : {"exposure-constant": 0.001, "ev-torch-env-ratio-on": 2.0, "ev-torch-env-ratio-off": 0.0001},
+    "skin-tone-detection" : {
+      "enabled" : false,
+      "country-mapping" : {
+        "in" : "SOUTH_ASIA"
+      },
+      "sku-mapping" : {}
+    },
+    "motoflash-tuning-enable" : [false,     false,     false,     false,    false,       false,     false,     false],
+    "max-concurrent-jobs-by-scene": {
+      "MODE_PHOTO_SINGLE_SESSION_REMOSAIC": 1
+    },
+    "max-concurrent-slip" : {
+      "MODE_PHOTO_SINGLE_SESSION_REMOSAIC": 0
+    }
+  },
+  "capri" : {
+    "camera-config" :           [ "back-main", "front-main", "back-depth", "back-wide","back-macro", "back-depth_1x", "back-logical-depth"],
+    "physical-camera-count" : 5,
+    "buffer-config" : {
+      "inputBufferCnt" :        [  12,         12,        12,    12,     12,        12,       12 ],
+      "outputBufferCnt" :       [  3,          3,         3,     3,      3,         3,        3  ]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,    12,     12,        12,        12 ],
+      "outputBufferCnt" :       [  4,          5,         4,     4,      4,         4,         4 ]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,    12,     12,        12,        12 ],
+      "outputBufferCnt" :       [  3,          5,         3,     3,      3,         3,         3 ]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  7,         3,          7,     7,      7,         7,         7 ],
+      "outputBufferCnt" :       [  2,         12,         2,     2,      2,         2,         2 ]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  1,         1,          1,     1,      1,         1,         1 ]
+    },
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [  2,     2,     2,   2,    2,     2,     2  ],
+      "single-normal-override" :      [  2,     2,     2,   2,    2,     2,     2  ],
+      "single-special-override" :     [  2,     2,     2,   2,    2,     2,     2  ],
+      "single-cam-mode-slip" :        [  4,     4,     4,   4,    4,     4,     4  ],
+      "dual-cam-mode" :               [  2,     2,     2,   2,    2,     2,     2  ],
+      "dual-depth-cam-mode" :         [  2,     2,     2,   2,    2,     2,     2  ],
+      "zoom-override-single-slip" :   [[[]],      [[]],    [[]],    [[]], [[]], [[]], [[]] ]
+    },
+    "snapshot-min-interval" :   100,    // in ms
+    "remosaic-config" : {
+      "gain-only-qcfa-decision" : true,
+      "analog-gain-threshold" : [  2.0  ],
+      "single-session-remosaic-estimate" : 3000
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-default" : [ 30,      30,        30,    30,  30,        30,        30 ],
+      "preview-rate-limit-lvl-1" : [ 24,      24,        24,    24,   24,        24,        24 ],
+      "preview-rate-limit-lvl-2" : [ 15,      15,        15,    15,   15,        15,        15 ],
+      "preview-rate-depth" :    [ 15,         15,        15,    15,   15,        15,        15 ]
+    },
+    "max-multishot-rate" :      [ 5.0,       5.0,       5.0,     5.0,    5.0,       5.0,       5.0 ],
+    "lowmem-kill-size-mb" :     [ 1200,     1200,      1200,    1200,   1200,      1200,      1200 ],
+    "extra-free-mem-size-mb" :  [  150,      150,       150,     150,    150,       150,       150 ],
+    "sf-bokeh-zoom-factor" :    [  1.0,      1.0,       1.0,     1.0,    1.0,       1.0,       1.0 ],
+    "high-resolution-output" :  [true,     false,     true,     true,   true,   true,     true],
+    "hq-preview":               [true,     true,      true,     true,   true,   true,     true],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "zoom-blending-segments" : [ 0.50,  1.0,  0],
+    "zoom-blending-manual-ratio-x" : [ 0.5,  1.670420],   // {[0.5x],1x} for ui, {1x,[1.670420x]} for engine
+    "custom-noise-reduction" :  [false,     false,     false,     false,     false,   false,    false],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 3000,
+    "disable-zsl-on-scenes" : ["HDR_NO_ADRC", "HDR", "HDR_ADVANCED", "SUPER_NIGHT", "RELIGHTING",
+      "SUPER_PORTRAIT", "FLASH", "DISPLAY_FLASH"],
+    "skin-tone-detection" : {
+      "enabled" : true,
+      "country-mapping" : {
+        "in" : "SOUTH_ASIA"
+      },
+      "sku-mapping" : {}
+    }
+  },
+  "caprip" : {
+    "camera-config" :           [ "back-main", "front-main", "back-depth", "back-wide","back-macro", "back-depth_1x", "back-logical-depth"],
+    "physical-camera-count" : 5,
+    "buffer-config" : {
+      "inputBufferCnt" :        [  12,         12,        12,    12,     12,        12,       12 ],
+      "outputBufferCnt" :       [  3,          3,         3,     3,      3,         3,        3  ]
+    },
+    "dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,    12,     12,        12,        12 ],
+      "outputBufferCnt" :       [  4,          5,         4,     4,      4,         4,         4 ]
+    },
+    "depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [ 12,         12,        12,    12,     12,        12,        12 ],
+      "outputBufferCnt" :       [  3,          5,         3,     3,      3,         3,         3 ]
+    },
+    "zsl-depth-dual-buffer-config" : {
+      "inputBufferCnt" :        [  7,         3,          7,     7,      7,         7,         7 ],
+      "outputBufferCnt" :       [  2,         12,         2,     2,      2,         2,         2 ]
+    },
+    "fullframe-config" : {
+      "skipPattern" :           [  1,         1,          1,     1,      1,         1,         1 ]
+    },
+    "max-concurrent-jobs" : {
+      "single-cam-mode" :             [  2,     2,     2,   2,    2,     2,     2  ],
+      "single-normal-override" :      [  2,     2,     2,   2,    2,     2,     2  ],
+      "single-special-override" :     [  2,     2,     2,   2,    2,     2,     2  ],
+      "single-cam-mode-slip" :        [  4,     4,     4,   4,    4,     4,     4  ],
+      "dual-cam-mode" :               [  2,     2,     2,   2,    2,     2,     2  ],
+      "dual-depth-cam-mode" :         [  2,     2,     2,   2,    2,     2,     2  ],
+      "zoom-override-single-slip" :   [[[]],      [[]],    [[]],    [[]], [[]], [[]], [[]] ]
+    },
+    "max-concurrent-jobs-by-scene": {
+      "MODE_SUPER_NIGHT" : 1,
+      "MODE_PHOTO_SINGLE_SESSION_REMOSAIC": 1
+    },
+    "max-concurrent-slip" : {
+      "MODE_SUPER_NIGHT": 0,
+      "MODE_PHOTO_SINGLE_SESSION_REMOSAIC": 0
+    },
+    "mcf-slow-capture-modes" : [ "MODE_PHOTO_SINGLE_SESSION_REMOSAIC" ],
+    "snapshot-min-interval" :   100,    // in ms
+    "remosaic-config" : {
+      "gain-only-qcfa-decision" : true,
+      "analog-gain-threshold" : [  2.0  ],
+      "single-session-remosaic-estimate" : 3000
+    },
+    "dual-primary-camera" :     2,
+    "feature-limiter-config" : {
+      "preview-rate-limit-default" : [ 30,      30,        30,    30,  30,        30,        30 ],
+      "preview-rate-limit-lvl-1" : [ 24,      24,        24,    24,   24,        24,        24 ],
+      "preview-rate-limit-lvl-2" : [ 15,      15,        15,    15,   15,        15,        15 ],
+      "preview-rate-depth" :    [ 15,         15,        15,    15,   15,        15,        15 ]
+    },
+    "max-multishot-rate" :      [ 5.0,       5.0,       5.0,     5.0,    5.0,       5.0,       5.0 ],
+    "lowmem-kill-size-mb" :     [ 1400,     1400,      1400,    1400,   1400,      1400,      1400 ],
+    "extra-free-mem-size-mb" :  [  150,      150,       150,     150,    150,       150,       150 ],
+    "sf-bokeh-zoom-factor" :    [  1.0,      1.0,       1.0,     1.0,    1.0,       1.0,       1.0 ],
+    "high-resolution-output" :  [true,     true,     true,     true,   true,   true,     true],
+    "hq-preview":               [true,     true,      true,     true,   true,   true,     true],
+    "scene-detection" : {
+      "platform" : "qc_chi"
+    },
+    "zoom-blending-segments" : [ 0.50,  1.0,  0],
+    "zoom-blending-manual-ratio-x" : [ 0.5,  1.726984],   // {[0.5x],1x} for ui, {1x,[1.726984x]} for engine
+    "custom-noise-reduction" :  [false,     false,     false,     false,     false,   false,    false],
+    "mcf-enabled" :             true,
+    "reproc-enabled" :          true,
+    "gralloc-usage-flags":      ["qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250", "qsm8250"],
+    "focus-timeout-dur": 300,
+    "focus-timeout-dur-flash": 5000,
+    "set-repeating-send-error-delay": 3000,
+    "qc-vibration-configs" : [ 150, 150 ],
+    "disable-zsl-on-scenes" : ["HDR_NO_ADRC", "HDR", "HDR_ADVANCED", "SUPER_NIGHT", "RELIGHTING",
+      "SUPER_PORTRAIT", "FLASH", "DISPLAY_FLASH"],
+    "skin-tone-detection" : {
+      "enabled" : false,
+      "country-mapping" : {
+        "in" : "SOUTH_ASIA"
+      },
+      "sku-mapping" : {}
+    }
+  }
+}

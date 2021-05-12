@@ -1,0 +1,10 @@
+android_app {
+    name: "MotCamera3-overlay",
+    resource_dirs: ["res"],
+    sdk_version: "current",
+    dex_preopt: {
+        enabled: false,
+    },
+    installable: false,
+    product_specific: true,
+}
