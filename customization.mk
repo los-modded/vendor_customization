@@ -64,6 +64,9 @@ endif
 
 # SEPolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += vendor/customization/sepolicy/private
+ifneq ($(BOARD_VENDOR),motorola)
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += vendor/customization/sepolicy/private-non_moto
+endif
 
 # Pixel Sounds
 PRODUCT_COPY_FILES += \
