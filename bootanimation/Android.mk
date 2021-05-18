@@ -15,7 +15,11 @@
 # limitations under the License.
 #
 
-TARGET_BOOTANIMATION := vendor/customization/bootanimation/bootanimation.zip
+ifeq ($(BOARD_VENDOR),motorola)
+TARGET_BOOTANIMATION := vendor/customization/bootanimation/bootanimation-motorola.zip
+else
+TARGET_BOOTANIMATION := vendor/customization/bootanimation/bootanimation-google.zip
+endif
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := bootanimation-stock.zip
