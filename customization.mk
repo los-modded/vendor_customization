@@ -81,3 +81,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     StitchImage \
     StitchImageService
+
+# Fonts
+-include $(LOCAL_PATH)/fonts/fonts.mk
