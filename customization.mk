@@ -83,4 +83,4 @@ PRODUCT_PACKAGES += \
     StitchImageService
 
 # Fonts
--include $(LOCAL_PATH)/fonts/fonts.mk
+#-include $(LOCAL_PATH)/fonts/fonts.mk
