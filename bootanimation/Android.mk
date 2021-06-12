@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-ifeq ($(BOARD_VENDOR),motorola)
+ifeq ($(PRODUCT_DEVICE),nio)
 TARGET_BOOTANIMATION := vendor/customization/bootanimation/bootanimation-motorola.zip
 else
 TARGET_BOOTANIMATION := vendor/customization/bootanimation/bootanimation-google.zip
