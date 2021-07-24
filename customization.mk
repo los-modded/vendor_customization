@@ -84,3 +84,8 @@ PRODUCT_PACKAGES += \
 
 # Fonts
 #-include $(LOCAL_PATH)/fonts/fonts.mk
+
+# Init
+PRODUCT_PACKAGES += \
+    init.lm.rc
+
