@@ -1,4 +1,4 @@
-# Copyright (C) 2020 ELectimon
+# Copyright (C) 2021 Electimon
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,6 +13,9 @@
 # limitations under the License.
 
 LOCAL_PATH := vendor/customization
+
+# Priv
+-include vendor/customization-priv/customization-priv.mk
 
 # Apps
 PRODUCT_PACKAGES += \
