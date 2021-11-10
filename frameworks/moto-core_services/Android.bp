@@ -1,0 +1,17 @@
+dex_import {
+    name: "moto-core_services",
+    owner: "motorola",
+    jars: ["moto-core_services.jar"],
+    required: [
+        "moto-core_services_permissions",
+    ],
+}
+
+prebuilt_etc {
+    name: "moto-core_services_permissions",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "moto-core_services.xml",
+    filename_from_src: true,
+}
+

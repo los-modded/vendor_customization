@@ -97,3 +97,12 @@ PRODUCT_PACKAGES += \
 # GamingMode
 PRODUCT_PACKAGES += \
     GamingMode
+
+# Telephony
+PRODUCT_PACKAGES += \
+    extphonelib \
+    extphonelib.xml
+
+# Moto Services
+PRODUCT_PACKAGES += \
+    moto-core_services
