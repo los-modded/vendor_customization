@@ -59,9 +59,11 @@ PRODUCT_PACKAGES += \
     bootanimation-stock.zip
 
 # MotCamera3
+ifeq ($(BOARD_VENDOR),motorola)
 TARGET_MOTOCAM3_SUPPORTED ?= true
-ifeq ($(TARGET_MOTOCAM3_SUPPORTED),true)
+endif
 PRODUCT_PACKAGES += \
+ifeq ($(TARGET_MOTOCAM3_SUPPORTED),true)
     MotCamera3
 endif
 
