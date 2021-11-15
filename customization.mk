@@ -59,7 +59,7 @@ PRODUCT_PACKAGES += \
     bootanimation-stock.zip
 
 # MotCamera3
-ifeq ($(BOARD_VENDOR),motorola)
+ifeq ($(TARGET_DEVICE),nio)
 TARGET_MOTOCAM3_SUPPORTED ?= true
 endif
 ifeq ($(TARGET_MOTOCAM3_SUPPORTED),true)
@@ -69,7 +69,7 @@ endif
 
 # SEPolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += vendor/customization/sepolicy/private
-ifneq ($(BOARD_VENDOR),motorola)
+ifneq ($(TARGET_DEVICE),nio)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += vendor/customization/sepolicy/private-non_moto
 endif
 
@@ -106,3 +106,7 @@ PRODUCT_PACKAGES += \
 # Moto Services
 PRODUCT_PACKAGES += \
     moto-core_services
+
+# One Handed-Mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
