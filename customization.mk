@@ -59,9 +59,7 @@ PRODUCT_PACKAGES += \
     bootanimation-stock.zip
 
 # MotCamera3
-ifeq ($(TARGET_DEVICE),nio)
 TARGET_MOTOCAM3_SUPPORTED ?= true
-endif
 ifeq ($(TARGET_MOTOCAM3_SUPPORTED),true)
 PRODUCT_PACKAGES += \
     MotCamera3
