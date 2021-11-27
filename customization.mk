@@ -14,9 +14,6 @@
 
 LOCAL_PATH := vendor/customization
 
-# Priv
--include vendor/customization-priv/customization-priv.mk
-
 # Apps
 PRODUCT_PACKAGES += \
     MotoTimeWeather
@@ -108,3 +105,6 @@ PRODUCT_PACKAGES += \
 # One Handed-Mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
+
+# Priv
+-include vendor/customization-priv/customization-priv.mk
