@@ -35,10 +35,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
 endif
 
-# Pixel APNs
-PRODUCT_COPY_FILES += \
-    vendor/customization/telephony/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
-
 # Disable RescueParty due to high risk of data loss
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.disable_rescue=true
@@ -60,12 +56,6 @@ TARGET_MOTOCAM3_SUPPORTED ?= true
 ifeq ($(TARGET_MOTOCAM3_SUPPORTED),true)
 PRODUCT_PACKAGES += \
     MotCamera3
-endif
-
-# SEPolicy
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += vendor/customization/sepolicy/private
-ifneq ($(TARGET_DEVICE),nio)
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += vendor/customization/sepolicy/private-non_moto
 endif
 
 # Pixel Sounds
