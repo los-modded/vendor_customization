@@ -96,5 +96,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
+ifeq ($(WITH_GMS),true)
+# SettingsIntelligenceGoogle
+PRODUCT_PACKAGES += \
+    SettingsIntelligenceGoogle
+endif
+
 # Priv
 -include vendor/customization-priv/customization-priv.mk

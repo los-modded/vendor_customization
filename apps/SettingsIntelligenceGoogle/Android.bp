@@ -1,0 +1,24 @@
+android_app_import {
+    name: "SettingsIntelligenceGoogle",
+    owner: "google",
+    apk: "SettingsIntelligenceGoogle.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    required: [
+        "privapp-permissions-SettingsIntelligenceGoogle",
+    ],
+    privileged: true,
+    product_specific: true,
+    overrides: ["SettingsIntelligence"],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-SettingsIntelligenceGoogle",
+    owner: "google",
+    sub_dir: "permissions",
+    src: "privapp-permissions-SettingsIntelligenceGoogle.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
